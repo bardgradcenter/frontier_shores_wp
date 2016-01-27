@@ -14,17 +14,17 @@
 
 		wp_register_script( 'jQuery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4', false );
 		wp_register_script( 'jQueryUI', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js', false, '1.11.4', false );
-		wp_register_script( 'jQueryColor', network_site_url() . 'js/min/jquery.color-2.1.2-min.js', false, '2.1.2', false );
-		wp_register_script( 'shadow', network_site_url() . 'js/min/jquery.animate-shadow-min.js', false, '', false );
-		wp_register_script( 'columnizer', network_site_url() . 'js/min/jquery.columnizer-min.js', false, '', false );
+		wp_register_script( 'jQueryColor', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.color-2.1.2-min.js', false, '2.1.2', false );
+		wp_register_script( 'shadow', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.animate-shadow-min.js', false, '', false );
+		wp_register_script( 'columnizer', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.columnizer-min.js', false, '', false );
 		wp_register_script( 'frontiershores', network_site_url() . 'wp-content/themes/frontier_shores/js/min/fs-min.js', false, '1.0', false );
 
 
 		wp_enqueue_script( 'jQuery' );
 		wp_enqueue_script( 'jQueryUI' );
-		wp_enqueue_script( 'jQueryColor', network_site_url() . 'js/min/jquery.color-2.1.2-min.js', false, '2.1.2', false );
-		wp_enqueue_script( 'shadow', network_site_url() . 'js/min/jquery.animate-shadow-min.js', false, '', false );
-		wp_enqueue_script( 'columnizer', network_site_url() . 'js/min/jquery.columnizer-min.js', false, '', false );
+		wp_enqueue_script( 'jQueryColor', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.color-2.1.2-min.js', false, '2.1.2', false );
+		wp_enqueue_script( 'shadow', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.animate-shadow-min.js', false, '', false );
+		wp_enqueue_script( 'columnizer', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.columnizer-min.js', false, '', false );
 		wp_enqueue_script( 'frontiershores', network_site_url() . 'wp-content/themes/frontier_shores/js/min/fs-min.js', false, '1.0', false );
 
 	}
