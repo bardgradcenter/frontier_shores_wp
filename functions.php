@@ -29,4 +29,14 @@
 
 	}
 	add_action ('wp_enqueue_scripts', 'scripts_and_styles');
+
+	//ENABELING SITEWIDE OPTIONS PAGE//
+	if( function_exists('acf_add_options_page') ) {
+		acf_add_options_page('Frontier Shores Sections');
+	}
+
+	//ENABELING FEATURED IMAGES FOR POSTS//
+	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'flag', 9999, 15 ); //15 pixels high (and unlimited width)
+	add_image_size( 'attract', 511, 511 );
 ?>

@@ -2,7 +2,9 @@
 /* End Variables */
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  -ms-touch-action: none;
+  -ms-content-zooming: none; }
 
 body {
   font-family: "Brown", sans-serif;
@@ -488,8 +490,8 @@ img {
       color: #e2dbcf;
       position: relative; }
       .content_section .icons .context_icon h2 {
-        font-size: 1em;
-        height: 16px;
+        font-size: .80em;
+        height: 13px;
         margin: auto;
         top: 0;
         bottom: 0;
@@ -848,8 +850,6 @@ img {
     right: 0;
     bottom: 0;
     left: 0; }
-  .the_lightbox img {
-    border: 15px solid #fff; }
   .the_lightbox p {
     padding: 0 15px 18px; }
   .the_lightbox h1 {

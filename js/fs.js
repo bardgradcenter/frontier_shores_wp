@@ -550,8 +550,8 @@ $(function(){
 		var lightbox_html = $(lightbox_content).html();
 		$('.the_lightbox .content').html(lightbox_html);
 		if($(lightbox_content).hasClass('image_content')){
-			var image_width = $(lightbox_content).find('img').width()+30;
-			var image_height = $(lightbox_content).find('img').height()+30;
+			var image_width = $(lightbox_content).find('img').width();
+			var image_height = $(lightbox_content).find('img').height();
 			$('.the_lightbox .content').width(image_width);
 			$('.the_lightbox').fadeIn(500);
 			var text_height = $('.the_lightbox .content .image_caption').height()+20;
