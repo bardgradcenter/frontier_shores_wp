@@ -18,6 +18,7 @@ $sixth_object: #00b398;
 	margin:0;
 	-ms-touch-action: none;
 	-ms-content-zooming: none;
+	-ms-user-select:none;
 }
 body {
 	font-family:"Brown", sans-serif;
@@ -46,7 +47,7 @@ img {
 		display: none;
 		z-index: 100;
 		position: absolute;
-		&:first-of-type {
+		&:nth-of-type(6n+1) {
 			.attract_image, .circle{
 				border-color:$first_object;
 			}
@@ -57,7 +58,7 @@ img {
 				color:$first_object;
 			}
 		}
-		&:nth-of-type(2) {
+		&:nth-of-type(6n+2) {
 			.attract_image, .circle{
 				border-color:$second_object;
 			}
@@ -68,7 +69,7 @@ img {
 				color:$second_object;
 			}
 		}
-		&:nth-of-type(3) {
+		&:nth-of-type(6n+3) {
 			.attract_image, .circle{
 				border-color:$third_object;
 			}
@@ -79,7 +80,7 @@ img {
 				color:$third_object;
 			}
 		}
-		&:nth-of-type(4) {
+		&:nth-of-type(6n+4) {
 			.attract_image, .circle{
 				border-color:$fourth_object;
 			}
@@ -90,7 +91,7 @@ img {
 				color:$fourth_object;
 			}
 		}
-		&:nth-of-type(5) {
+		&:nth-of-type(6n+5) {
 			.attract_image, .circle{
 				border-color:$fifth_object;
 			}
@@ -101,8 +102,16 @@ img {
 				color:$fifth_object;
 			}
 		}
-		&:nth-of-type(6) {
-			border-color:$sixth_object;
+		&:nth-of-type(6n+6) {
+			.attract_image, .circle{
+				border-color:$sixth_object;
+			}
+			.connector {
+				background-color: $sixth_object;
+			}
+			.call_to {
+				color:$sixth_object;
+			}
 		}
 	}
 	.attract_image {
@@ -135,7 +144,7 @@ img {
 		height: 100%;
 		position: absolute;
 		left: 0%;
-		z-index: 20;
+		z-index: 10;
 		.label {
 			position: absolute;
 		    width: 100%;
@@ -778,6 +787,7 @@ img {
 					left: 0;
 					display: none;
 					img {
+						padding-top: 30px;
 						margin-left:15px;
 						margin-right: 15px;
 						max-width: 397px;
@@ -986,7 +996,7 @@ img {
 			width: 25%;
 			position: absolute;
 			left: 62.5%;
-			z-index: 20;
+			z-index: 10;
 			.label {
 				position:absolute;
 				width: 100%;

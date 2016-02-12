@@ -62,7 +62,13 @@
 							<div class="attract_item">
 							<?php } ?>
 								<div class="attract_image">
-									<?php the_post_thumbnail( 'attract'); ?>
+									<?php 
+									$image = get_field('image_for_circle');
+									if($image){ 
+										$size = 'attract';
+										$attract = $image['sizes'][$size]; ?>
+										<img src="<?php echo $attract; ?>">
+									<?php } ?>
 									<div class="x_cord"><?php the_field('x_coord');?></div>
 									<div class="y_cord"><?php the_field('y_coord');?></div>
 								</div>
@@ -110,11 +116,11 @@
 								<?php foreach( $icons as $post ){ ?>
 									<?php setup_postdata($post); ?>
 									<div class="single_icon">
-										<?php
-										$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
-										$thumb_url = $thumb['0'];
-										?>
-										<div class="object_icon" style="background: url('<?php echo $thumb_url; ?>') center center;">
+										<?php 
+										$image = get_field('image_for_circle');
+										$size = 'thumbnail';
+										$thumb = $image['sizes'][$size]; ?>
+										<div class="object_icon" style="background: url('<?php echo $thumb; ?>') center center;">
 											<div class="x_cord"><?php the_field('x_coord'); ?></div>
 											<div class="y_cord"><?php the_field('y_coord'); ?></div>
 										</div>
@@ -126,9 +132,9 @@
 						</div>
 						<div class="expanded active">
 							<div class="single_content context_content">
-								<h1 style="display:block;"><?php the_sub_field('essay_title'); ?></h1>
 								<div class="content" style="display:block;">
-									
+									<h1 style="display:block;"><?php the_sub_field('essay_title'); ?></h1>
+
 									<?php the_sub_field('essay_abstract'); ?>
 
 									<div class="label_bar in_content">
@@ -204,7 +210,6 @@
 								<?php setup_postdata($post); ?>
 								<div class="expanded">
 									<div class="single_content object_content">
-										<h1><?php the_field('object_title'); ?></h1>
 										<div class="images">
 											<?php the_post_thumbnail('medium', array('class' => 'lightbox_trigger')); ?>
 											<div class="image_caption">
@@ -224,6 +229,7 @@
 											</div>
 										</div>
 										<div class="content">
+											<h1><?php the_field('object_title'); ?></h1>
 											<?php the_field('essay_abstract'); ?>
 											<?php
 											$read_more = get_field('read_more_page');

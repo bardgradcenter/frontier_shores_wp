@@ -4,7 +4,8 @@
   padding: 0;
   margin: 0;
   -ms-touch-action: none;
-  -ms-content-zooming: none; }
+  -ms-content-zooming: none;
+  -ms-user-select: none; }
 
 body {
   font-family: "Brown", sans-serif;
@@ -32,38 +33,42 @@ img {
     display: none;
     z-index: 100;
     position: absolute; }
-    .attract_loop .attract_item:first-of-type .attract_image, .attract_loop .attract_item:first-of-type .circle {
+    .attract_loop .attract_item:nth-of-type(6n+1) .attract_image, .attract_loop .attract_item:nth-of-type(6n+1) .circle {
       border-color: #842b38; }
-    .attract_loop .attract_item:first-of-type .connector {
+    .attract_loop .attract_item:nth-of-type(6n+1) .connector {
       background-color: #842b38; }
-    .attract_loop .attract_item:first-of-type .call_to {
+    .attract_loop .attract_item:nth-of-type(6n+1) .call_to {
       color: #842b38; }
-    .attract_loop .attract_item:nth-of-type(2) .attract_image, .attract_loop .attract_item:nth-of-type(2) .circle {
+    .attract_loop .attract_item:nth-of-type(6n+2) .attract_image, .attract_loop .attract_item:nth-of-type(6n+2) .circle {
       border-color: #356e5d; }
-    .attract_loop .attract_item:nth-of-type(2) .connector {
+    .attract_loop .attract_item:nth-of-type(6n+2) .connector {
       background-color: #356e5d; }
-    .attract_loop .attract_item:nth-of-type(2) .call_to {
+    .attract_loop .attract_item:nth-of-type(6n+2) .call_to {
       color: #356e5d; }
-    .attract_loop .attract_item:nth-of-type(3) .attract_image, .attract_loop .attract_item:nth-of-type(3) .circle {
+    .attract_loop .attract_item:nth-of-type(6n+3) .attract_image, .attract_loop .attract_item:nth-of-type(6n+3) .circle {
       border-color: #44356e; }
-    .attract_loop .attract_item:nth-of-type(3) .connector {
+    .attract_loop .attract_item:nth-of-type(6n+3) .connector {
       background-color: #44356e; }
-    .attract_loop .attract_item:nth-of-type(3) .call_to {
+    .attract_loop .attract_item:nth-of-type(6n+3) .call_to {
       color: #44356e; }
-    .attract_loop .attract_item:nth-of-type(4) .attract_image, .attract_loop .attract_item:nth-of-type(4) .circle {
+    .attract_loop .attract_item:nth-of-type(6n+4) .attract_image, .attract_loop .attract_item:nth-of-type(6n+4) .circle {
       border-color: #3d6689; }
-    .attract_loop .attract_item:nth-of-type(4) .connector {
+    .attract_loop .attract_item:nth-of-type(6n+4) .connector {
       background-color: #3d6689; }
-    .attract_loop .attract_item:nth-of-type(4) .call_to {
+    .attract_loop .attract_item:nth-of-type(6n+4) .call_to {
       color: #3d6689; }
-    .attract_loop .attract_item:nth-of-type(5) .attract_image, .attract_loop .attract_item:nth-of-type(5) .circle {
+    .attract_loop .attract_item:nth-of-type(6n+5) .attract_image, .attract_loop .attract_item:nth-of-type(6n+5) .circle {
       border-color: #df661d; }
-    .attract_loop .attract_item:nth-of-type(5) .connector {
+    .attract_loop .attract_item:nth-of-type(6n+5) .connector {
       background-color: #df661d; }
-    .attract_loop .attract_item:nth-of-type(5) .call_to {
+    .attract_loop .attract_item:nth-of-type(6n+5) .call_to {
       color: #df661d; }
-    .attract_loop .attract_item:nth-of-type(6) {
+    .attract_loop .attract_item:nth-of-type(6n+6) .attract_image, .attract_loop .attract_item:nth-of-type(6n+6) .circle {
       border-color: #00b398; }
+    .attract_loop .attract_item:nth-of-type(6n+6) .connector {
+      background-color: #00b398; }
+    .attract_loop .attract_item:nth-of-type(6n+6) .call_to {
+      color: #00b398; }
   .attract_loop .attract_image {
     width: 511px;
     height: 511px;
@@ -92,7 +97,7 @@ img {
     height: 100%;
     position: absolute;
     left: 0%;
-    z-index: 20; }
+    z-index: 10; }
     .attract_loop .locator .label {
       position: absolute;
       width: 100%;
@@ -610,6 +615,7 @@ img {
           left: 0;
           display: none; }
           .content_section .expanded .single_content.object_content .images img {
+            padding-top: 30px;
             margin-left: 15px;
             margin-right: 15px;
             max-width: 397px;
@@ -776,7 +782,7 @@ img {
       width: 25%;
       position: absolute;
       left: 62.5%;
-      z-index: 20; }
+      z-index: 10; }
       .content_section .expanded .locator .label {
         position: absolute;
         width: 100%;

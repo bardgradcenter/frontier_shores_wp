@@ -48,9 +48,9 @@
 
 @font-face {
     font-family: "Brown";
-    src:url("fonts/lineto-brown-lightitalic.eot");
-    src:url("fonts/lineto-brown-lightitalic.eot?#iefix") format("embedded-opentype"),
-        url("fonts/lineto-brown-lightitalic.woff") format("woff");
+    src:url("fonts/lineto-brown-lightItalic.eot");
+    src:url("fonts/lineto-brown-lightItalic.eot?#iefix") format("embedded-opentype"),
+        url("fonts/lineto-brown-lightItalic.woff") format("woff");
     font-weight: normal;
     font-style: italic;
 }
