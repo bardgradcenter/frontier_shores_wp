@@ -209,6 +209,10 @@
 							<?php foreach( $objects as $post ){ ?>
 								<?php setup_postdata($post); ?>
 								<div class="expanded">
+									<div class="triangle">
+										<div class="inner">
+										</div>
+									</div>
 									<div class="single_content object_content">
 										<div class="images">
 											<?php the_post_thumbnail('medium', array('class' => 'lightbox_trigger')); ?>
@@ -294,10 +298,6 @@
 										<div class="circle">
 										</div>
 										<div class="connector">
-											<div class="triangle">
-												<div class="inner">
-												</div>
-											</div>
 										</div>
 									</div>
 								</div>
