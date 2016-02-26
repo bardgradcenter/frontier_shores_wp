@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Frontier Shores</title>
 	<?php wp_head(); ?>
+	<link rel="stylesheet" type="text/css" href="<?php echo network_site_url(); ?>wp-content/themes/frontier_shores/css/style-large.css">
 </head>
 <body>
 	<div class="container">
@@ -136,6 +137,20 @@
 									<h1 style="display:block;"><?php the_sub_field('essay_title'); ?></h1>
 
 									<?php the_sub_field('essay_abstract'); ?>
+									<?php
+									$read_more = get_sub_field('read_more_page');
+									if($read_more == 'true'){ ?>
+										<h2 class="lightbox_trigger">Read More</h2>
+										<div class="lightbox_content text_content">
+											<div class="content" style="width:1024.5px; height:616px;">
+												<h1><?php the_sub_field('essay_title'); ?></h1>
+												<div class="content_column">
+													<?php the_sub_field('essay_abstract'); ?>
+													<?php the_sub_field('read_more_essay'); ?>
+												</div>
+											</div>
+										</div>
+									<?php } ?>
 
 									<div class="label_bar in_content">
 										<?php
@@ -258,9 +273,9 @@
 										<div class="full_map condensed">
 											<?php
 											$x_coord = get_field('x_coord');
-											$x_percent = (($x_coord / 1366)*100)-1.546486090776;
+											$x_percent = (($x_coord / 1600)*100)-1.546486090776;
 											$y_coord = get_field('y_coord');
-											$y_percent = (($y_coord / 768)*100)-2.92968749999997;
+											$y_percent = (($y_coord / 900)*100)-2.92968749999997;
 											?>
 											<div class="crop_outline" style="left: <?php echo $x_percent;?>%; top: <?php echo $y_percent;?>%;">
 											</div>
