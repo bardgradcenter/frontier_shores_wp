@@ -70,10 +70,10 @@ img {
     .attract_loop .attract_item:nth-of-type(6n+6) .call_to {
       color: #00b398; }
   .attract_loop .attract_image {
-    width: 511px;
-    height: 511px;
+    width: 600px;
+    height: 600px;
     border: 3px solid;
-    border-radius: 258.5px;
+    border-radius: 303px;
     margin: auto;
     position: absolute;
     top: 0;
@@ -111,10 +111,10 @@ img {
       font-weight: bold;
       margin: auto; }
     .attract_loop .locator .circle {
-      width: 84px;
-      height: 84px;
+      width: 100px;
+      height: 100px;
       border: 3px solid #842b38;
-      border-radius: 45px;
+      border-radius: 53px;
       position: absolute;
       top: 0px;
       right: 0;
@@ -123,13 +123,13 @@ img {
       margin: auto; }
     .attract_loop .locator .connector {
       position: absolute;
-      width: 210px;
+      width: 250px;
       height: 3px;
       top: -1px;
       right: 0;
       background-color: #842b38;
       bottom: 0;
-      left: 216px;
+      left: 250px;
       margin: auto 0; }
   .attract_loop .call_to {
     width: 31.25%;
@@ -157,7 +157,7 @@ img {
     right: 0;
     top: 48px;
     background-color: #e2dbcf;
-    height: 720px;
+    height: 852px;
     border-left: 3px solid #a09b93; }
     .intro_screen .intro_content h1 {
       font-size: 2.13333333333333em;
@@ -174,16 +174,16 @@ img {
 .container {
   font-size: 0.9375em;
   /* 15 / 16 */
-  width: 1366px;
-  height: 768px;
+  width: 1600px;
+  height: 900px;
   margin: auto;
   position: relative;
   background-color: #b6afa5;
   overflow: hidden; }
 
 #mapContainer {
-  height: 768px;
-  width: 1366px;
+  height: 900px;
+  width: 1600px;
   overflow: hidden;
   margin: auto;
   position: absolute;
@@ -193,8 +193,8 @@ img {
   right: 0; }
 
 .context_map {
-  width: 1366px;
-  height: 768px;
+  width: 1600px;
+  height: 900px;
   background: url("../images/detailed_oceanic_map_50-01.jpg") top left no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -207,12 +207,12 @@ img {
   bottom: 0px;
   z-index: 1; }
   .context_map.big {
-    background-image: url("../images/detailed_oceanic_map_low-01.jpg"); }
+    background-image: url("../images/detailed_oceanic_map_low-01_new.jpg"); }
 
 .attract_loop_map {
-  background-image: url("../images/detailed_oceanic_map_low-01.jpg");
-  width: 10928px;
-  height: 6144px;
+  background-image: url("../images/detailed_oceanic_map_low-01_new.jpg");
+  width: 12800px;
+  height: 7196px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -225,8 +225,8 @@ img {
   z-index: 3; }
 
 .intro_map {
-  width: 939.125px;
-  height: 720px;
+  width: 1100px;
+  height: 852px;
   overflow: hidden;
   position: absolute;
   top: 48px;
@@ -271,13 +271,13 @@ img {
   width: 12.5%;
   border: 1px solid #e1dbce;
   background-color: #928c85;
-  z-index: 30; }
+  z-index: 110; }
   .small_map .expand_map {
     padding: 15px;
     color: #fff8ea;
     text-transform: uppercase;
     position: relative;
-    margin-bottom: 97px; }
+    margin-bottom: 113px; }
   .small_map .full_map {
     border-top: 1px solid #e1dbce;
     position: absolute;
@@ -310,7 +310,7 @@ img {
     display: none;
     top: 0;
     width: 100%;
-    height: 720px; }
+    height: 852px; }
 
 .label_bar {
   position: absolute;
@@ -363,8 +363,8 @@ img {
       margin-left: 5px; }
 
 .labels {
-  width: 1366px;
-  height: 768px;
+  width: 1600px;
+  height: 900px;
   position: absolute;
   top: -48px;
   display: none;
@@ -517,7 +517,7 @@ img {
     position: absolute;
     z-index: 10;
     width: 100%;
-    height: 720px;
+    height: 852px;
     top: 48px;
     right: 0;
     display: none; }
@@ -531,7 +531,7 @@ img {
       left: 25%;
       margin-left: -17px;
       z-index: 100;
-      top: 175.5px;
+      top: 216.5px;
       display: none; }
       .content_section .expanded .triangle .inner {
         width: 0;
@@ -667,7 +667,8 @@ img {
         font-weight: bold;
         display: none; }
       .content_section .expanded .single_content h2.lightbox_trigger {
-        padding: 30px 15px 0; }
+        padding: 30px 15px 0;
+        display: block; }
       .content_section .expanded .single_content p {
         padding: 0 15px 18px; }
     .content_section .expanded .warrior_section {
@@ -808,24 +809,24 @@ img {
         position: absolute;
         width: 100%;
         text-align: center;
-        bottom: -127px;
+        bottom: -156px;
         font-family: "Brown", sans-serif;
         font-weight: bold; }
       .content_section .expanded .locator .circle {
-        width: 84px;
-        height: 84px;
+        width: 100px;
+        height: 100px;
         border: 3px solid;
-        border-radius: 45px;
-        top: 132px;
+        border-radius: 53px;
+        top: 164px;
         position: absolute;
         right: 0;
         left: 0;
         margin: 0 auto; }
       .content_section .expanded .locator .connector {
         position: absolute;
-        width: 127px;
+        width: 150px;
         height: 3px;
-        top: 176px;
+        top: 216px;
         right: 0; }
       .content_section .expanded .locator .map_button {
         position: absolute;
@@ -868,7 +869,7 @@ img {
     font-family: 'GrouchITCbyBT-Regular', serif;
     padding: 30px 15px 30px;
     line-height: 1.0625em;
-    display: none; }
+    display: block; }
   .the_lightbox h2 {
     font-size: 1em;
     text-transform: uppercase;

@@ -4,7 +4,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Frontier Shores</title>
 	<?php wp_head(); ?>
-	<link rel="stylesheet" type="text/css" href="<?php echo network_site_url(); ?>wp-content/themes/frontier_shores/css/style-large.css">
 </head>
 <body>
 	<div class="container">
