@@ -17,7 +17,7 @@
 		wp_register_script( 'jQueryColor', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.color-2.1.2-min.js', false, '2.1.2', false );
 		wp_register_script( 'shadow', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.animate-shadow-min.js', false, '', false );
 		wp_register_script( 'columnizer', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.columnizer-min.js', false, '', false );
-		wp_register_script( 'frontiershores', network_site_url() . 'wp-content/themes/frontier_shores/js/min/fs-min.js', false, '1.0', false );
+		wp_register_script( 'frontiershores', network_site_url() . 'wp-content/themes/frontier_shores/js/min/fs-min.js', false, '2.0', false );
 
 
 		wp_enqueue_script( 'jQuery' );
@@ -25,7 +25,7 @@
 		wp_enqueue_script( 'jQueryColor', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.color-2.1.2-min.js', false, '2.1.2', false );
 		wp_enqueue_script( 'shadow', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.animate-shadow-min.js', false, '', false );
 		wp_enqueue_script( 'columnizer', network_site_url() . 'wp-content/themes/frontier_shores/js/min/jquery.columnizer-min.js', false, '', false );
-		wp_enqueue_script( 'frontiershores', network_site_url() . 'wp-content/themes/frontier_shores/js/min/fs-min.js', false, '1.0', false );
+		wp_enqueue_script( 'frontiershores', network_site_url() . 'wp-content/themes/frontier_shores/js/min/fs-min.js', false, '2.0', false );
 
 	}
 	add_action ('wp_enqueue_scripts', 'scripts_and_styles');

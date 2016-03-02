@@ -1,6 +1,6 @@
 function navigateto(x_cord, y_cord, zoom){
 
-	//ENTER X AND Y COORDINATES OF ZOOM POINT ON MAP THAT IS 1366PX WIDE
+	//ENTER X AND Y COORDINATES OF ZOOM POINT ON MAP THAT IS 1600PX WIDE
 
 	var map = $('.context_map');
 	var scale = zoom;
@@ -8,10 +8,10 @@ function navigateto(x_cord, y_cord, zoom){
 	var y = y_cord;
 	var xScaled = x*scale;
 	var yScaled = y*scale;
-	var mapXScaled = 1366*scale;
-	var mapYScaled = 768*scale;
-	var xp = xScaled-(170.75); // 1366 * 0.125
-	var yp = yScaled-(230.4); // 768 * 0.3
+	var mapXScaled = 1600*scale;
+	var mapYScaled = 900*scale;
+	var xp = xScaled-(200); // 1600 * 0.125
+	var yp = yScaled-(270); // 900 * 0.3
 	
 	map.animate({
 		'left' : '-' + xp,
@@ -37,10 +37,10 @@ function attract_loop(active_item){
 	var y = $(active_item).find('.y_cord').text();
 	var xScaled = x*scale;
 	var yScaled = y*scale;
-	var mapXScaled = 1366*scale;
-	var mapYScaled = 768*scale;
-	var xp = xScaled-(170.75); // 1366 * 0.125
-	var yp = yScaled-(389); // 768 * 0.5 + 5
+	var mapXScaled = 1600*scale;
+	var mapYScaled = 900*scale;
+	var xp = xScaled-(200); // 1600 * 0.125
+	var yp = yScaled-(455); // 900 * 0.5 + 5
 	map.animate({
 		'left' : '-' + xp,
 		'top' : '-' + yp,
@@ -111,8 +111,8 @@ $(function(){
 			});
 
 			$('.intro_map').animate({
-				'width': 939.125,
-				'height' : 720,
+				'width': 1100,
+				'height' : 852,
 				'top' : '48px',
 				'left' : '0',
 				'opacity' : 1
@@ -176,8 +176,8 @@ $(function(){
 				$('.intro_map').animate({
 					'width': 3052.15625,
 					'height' : 2340,
-					'top' : '-125%',
-					'left' : '-89%',
+					'top' : '-98%',
+					'left' : '-75%',
 					'opacity' : 0
 				}, 3000, 'easeInOutCubic');
 				
@@ -239,8 +239,8 @@ $(function(){
 						map.animate({
 							'left' : 0,
 							'top' : 0,
-							'width' : 1366,
-							'height' : 768,
+							'width' : 1600,
+							'height' : 900,
 						}, 3000, 'easeInOutCubic', function(){
 						});
 					}
@@ -402,8 +402,8 @@ $(function(){
 						map.animate({
 							'left' : 0,
 							'top' : 0,
-							'width' : 1366,
-							'height' : 768,
+							'width' : 1600,
+							'height' : 900,
 						}, 3000, 'easeInOutCubic', function(){
 							$(expanded).find('.beacons').fadeIn(250);
 							if($('.label_bar .checkbox').hasClass('checked')){
@@ -450,8 +450,8 @@ $(function(){
 	$('.expand_map').click(function(){
 		$(this).next('.full_map').removeClass('condensed');
 		$('.content_section.active .expanded.active .small_map .full_map').css('z-index',30).css('border-right','1px solid #e1dbce').animate({
-			'width' : 1280,
-			'height' : 720,
+			'width' : 1499,
+			'height' : 852,
 			'background-color' : 'rgb(182, 175, 166)'
 		}, 500, function(){
 			if($('.label_bar .checkbox').hasClass('checked')){
@@ -470,8 +470,8 @@ $(function(){
 		$(active_expanded).find('.small_map .full_map .labels').fadeOut(500, function(){
 			$(active_expanded).find('.small_map .full_map .label_bar').fadeOut(500);
 			$(active_expanded).find('.small_map .full_map').css('border-right','none').animate({
-				'width' : 170.750,
-				'height' : 96,
+				'width' : 200,
+				'height' : 113,
 				'background-color' : 'rgb(146, 140, 133)'
 			}, 500, function(){
 				$(this).css('z-index','');
