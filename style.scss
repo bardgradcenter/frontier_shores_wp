@@ -456,8 +456,8 @@ img {
 	position: absolute;
     top: -51px;
     left: 0px;
-    width: 1450px;
-    height: 787px;
+    width: 1698px;
+    height: 922px;
     background: url("../images/german_map.png") top left no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -1096,6 +1096,7 @@ img {
 		padding: 30px 15px 30px;
 		line-height: 1.0625em;
 		display:block;
+		color:$first_object;
 	}
 	h2 {
 		font-size: 1em;
@@ -1113,7 +1114,8 @@ img {
 		padding: 10px 15px 0;
 	}
 	.close {
-		border:1px solid #b6afa6;
+		border:1px solid $first_object;
+		color:$first_object;
 		padding: 15px;
 		position: absolute;
 		text-transform: uppercase;
