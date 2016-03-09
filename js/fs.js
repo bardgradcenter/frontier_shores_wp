@@ -486,11 +486,13 @@ $(function(){
 		var index = $(this).parent().find('.lightbox_trigger').index( this );
 		var lightbox_content = $(this).parent().find('.lightbox_content').eq( index );
 		var lightbox_html = $(lightbox_content).html();
+		var link_color = $(this).parent().parent().find('.content').find('h1').css('color');
 		$('.the_lightbox .content').html(lightbox_html);
 		if($(lightbox_content).hasClass('image_content')){
 			var image_width = $(lightbox_content).find('img').width();
 			var image_height = $(lightbox_content).find('img').height();
 			$('.the_lightbox .content').width(image_width);
+			$('.the_lightbox .close').css('border-color', link_color).css('color', link_color);
 			$('.the_lightbox').fadeIn(500);
 			var text_height = $('.the_lightbox .content .image_caption').height()+20;
 			var content_height = image_height + text_height;
@@ -499,6 +501,7 @@ $(function(){
 			var content_width = $(lightbox_content).find('.content').width()+30;
 			var content_height = $(lightbox_content).find('.content').height()+30;
 			$('.the_lightbox .content').width(content_width).height(content_height);
+			$('.the_lightbox .close').css('border-color', link_color).css('color', link_color);
 			$('.the_lightbox').fadeIn(500);
 			$('.the_lightbox .content_column').columnize({width:512.250, accuracy:1});
 
