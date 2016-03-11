@@ -203,17 +203,23 @@
 								<div class="german_map">
 								</div>
 							<?php } ?>
-							<div class="labels non_full_map">
-								<div class="label" style="left:10.688140556369%; top:61.588541666667%;">
-									<strong>Australia</strong>
+							<?php if( have_rows('current_day_nations', 'options')) { ?>
+								<div class="labels non_full_map">
+									<?php while ( have_rows('current_day_nations', 'options') ) { the_row(); ?>
+										
+										<?php
+										$x_coord = get_sub_field('x_coord');
+										$y_coord = get_sub_field('y_coord');
+										$xcoord = ($x_coord / 1600)*100;
+										$ycoord = ($y_coord / 900)*100;
+										?>
+										<div class="label" style="left:<?php echo $xcoord; ?>%; top: <?php echo $ycoord; ?>%">
+											<strong><?php the_sub_field('label'); ?></strong>
+										</div>
+
+									<?php } ?>
 								</div>
-								<div class="label" style="left:16.617862371889%; top:38.151041666667%;">
-									<strong>Paupa New<br>Guinea</strong>
-								</div>
-								<div class="label" style="left:30.234260614934%; top:80.989583333333%;">
-									<strong>New Zealand</strong>
-								</div>
-							</div>
+							<?php } ?>
 						</div>
 
 
@@ -228,6 +234,29 @@
 										</div>
 									</div>
 									<div class="single_content object_content">
+										
+									<?php
+									$images = get_field('image_gallery');
+									if( $images ){ ?>
+										<div class="images">
+											<?php $n = 1; ?>
+											<?php foreach( $images as $image ){ ?>
+												
+												<img src="<?php echo $image['sizes']['medium']; ?>" class="lightbox_trigger" <?php if( $n =='1' ){?>style="display:block;"<?php } else { ?>style="display: none;"<?php }; ?>>
+
+												<div class="image_caption" <?php if( $n =='1' ){?>style="display:block;"<?php } else { ?>style="display: none;"<?php }; ?>>
+													<?php echo $image['caption']; ?>
+												</div>
+
+												<?php $n++; ?>
+											<?php }; ?>
+											<?php foreach( $images as $image ){ ?>
+												
+												<img src="<?php echo $image['sizes']['gallery_thumb']; ?>" class="gallery_thumb">
+
+											<?php }; ?>
+										</div>
+									<?php } else { ?>
 										<div class="images">
 											<?php the_post_thumbnail('medium', array('class' => 'lightbox_trigger')); ?>
 											<div class="image_caption">
@@ -246,6 +275,7 @@
 												</div>
 											</div>
 										</div>
+									<?php } ?>
 										<div class="content">
 											<h1><?php the_field('object_title'); ?></h1>
 											<?php the_field('essay_abstract'); ?>
@@ -274,7 +304,7 @@
 											$x_coord = get_field('x_coord');
 											$x_percent = (($x_coord / 1600)*100)-1.546486090776;
 											$y_coord = get_field('y_coord');
-											$y_percent = (($y_coord / 900)*100)-2.92968749999997;
+											$y_percent = (($y_coord / 900)*100)-3.25555555559997;
 											?>
 											<div class="crop_outline" style="left: <?php echo $x_percent;?>%; top: <?php echo $y_percent;?>%;">
 											</div>
@@ -285,18 +315,26 @@
 												<div class="checkbox unchecked"></div>
 												Show Current-Day Nations
 											</div>
-											<div class="labels">
-												<div class="label" style="left:10.688140556369%; top:61.588541666667%;">
-													<strong>Australia</strong>
+
+											<?php if( have_rows('current_day_nations', 'options')) { ?>
+												<div class="labels">
+													<?php while ( have_rows('current_day_nations', 'options') ) { the_row(); ?>
+														
+														<?php
+														$x_coord = get_sub_field('x_coord');
+														$y_coord = get_sub_field('y_coord');
+														$xcoord = ($x_coord / 1600)*100;
+														$ycoord = ($y_coord / 900)*100;
+														?>
+														<div class="label" style="left:<?php echo $xcoord; ?>%; top: <?php echo $ycoord; ?>%">
+															<strong><?php the_sub_field('label'); ?></strong>
+														</div>
+
+													<?php } ?>
 												</div>
-												<div class="label" style="left:16.617862371889%; top:38.151041666667%;">
-													<strong>Paupa New<br>Guinea</strong>
-												</div>
-												<div class="label" style="left:30.234260614934%; top:80.989583333333%;">
-													<strong>New Zealand</strong>
-												</div>
-											</div>
-											<img src="<?php echo network_site_url(); ?>wp-content/themes/frontier_shores/images/expand_map.png">
+											<?php } ?>
+											
+											<img src="<?php echo network_site_url(); ?>wp-content/themes/frontier_shores/images/expand_map_new.png">
 										</div>
 									</div>
 									<div class="label_bar">

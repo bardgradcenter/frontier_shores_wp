@@ -38,5 +38,6 @@
 	//ENABELING FEATURED IMAGES FOR POSTS//
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'flag', 9999, 15 ); //15 pixels high (and unlimited width)
+	add_image_size( 'gallery_thumb', 9999, 64);
 	add_image_size( 'attract', 600, 600 );
 ?>
