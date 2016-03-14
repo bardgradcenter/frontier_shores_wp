@@ -240,21 +240,38 @@
 									if( $images ){ ?>
 										<div class="images">
 											<?php $n = 1; ?>
-											<?php foreach( $images as $image ){ ?>
+											<?php $i = 1; ?>
+											<div class="image_gallery">
+												<?php foreach( $images as $image ){ ?>
+													
+													<img src="<?php echo $image['sizes']['medium']; ?>" class="lightbox_trigger" <?php if( $n =='1' ){?>style="display:block;"<?php } else { ?>style="display: none;"<?php }; ?>>
+
+													<div class="image_caption" <?php if( $n =='1' ){?>style="display:block;"<?php } else { ?>style="display: none;"<?php }; ?>>
+														<?php echo $image['caption']; ?>
+													</div>
+													<div class="lightbox_content image_content">
+														<?php
+														$lrg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+														$lrg_img_url = $lrg_img['0'];
+														$lrg_img_width = $lrg_img['1'];
+														$lrg_img_height = $lrg_img['2'];
+														?>
+														<img src="<?php echo $image['sizes']['large']; ?>" style="width:<?php echo $image['sizes']['large-width']; ?>px; height:<?php echo $image['sizes']['large-height']; ?>px;">
+														<div class="image_caption">
+															<?php echo $image['caption']; ?>
+														</div>
+													</div>
+
+													<?php $n++; ?>
+												<?php }; ?>
+											</div>
+											<div class="gallery_thumbs">
+												<?php foreach( $images as $image ){ ?>
 												
-												<img src="<?php echo $image['sizes']['medium']; ?>" class="lightbox_trigger" <?php if( $n =='1' ){?>style="display:block;"<?php } else { ?>style="display: none;"<?php }; ?>>
-
-												<div class="image_caption" <?php if( $n =='1' ){?>style="display:block;"<?php } else { ?>style="display: none;"<?php }; ?>>
-													<?php echo $image['caption']; ?>
-												</div>
-
-												<?php $n++; ?>
-											<?php }; ?>
-											<?php foreach( $images as $image ){ ?>
-												
-												<img src="<?php echo $image['sizes']['gallery_thumb']; ?>" class="gallery_thumb">
-
-											<?php }; ?>
+													<img src="<?php echo $image['sizes']['gallery_thumb']; ?>" class="gallery_thumb<?php if( $i =='1' ){?> active<?php };?>">
+													<?php $i++; ?>
+												<?php }; ?>
+											</div>
 										</div>
 									<?php } else { ?>
 										<div class="images">
@@ -333,7 +350,7 @@
 													<?php } ?>
 												</div>
 											<?php } ?>
-											
+
 											<img src="<?php echo network_site_url(); ?>wp-content/themes/frontier_shores/images/expand_map_new.png">
 										</div>
 									</div>
@@ -342,6 +359,13 @@
 										Show Current-Day Nations
 									</div>
 									<div class="labels non_full_map">
+										<?php if( have_rows('nation_labels')) { ?>
+											<?php while ( have_rows('nation_labels') ) { the_row(); ?>
+												<div class="label" style="left:<?php the_sub_field('x_coord'); ?>px; top: <?php the_sub_field('y_coord'); ?>px">
+													<strong><?php the_sub_field('nation_name'); ?></strong>
+												</div>
+											<?php } ?>
+										<?php } ?>									
 									</div>
 									<div class="locator">
 										<div class="label">
