@@ -5,7 +5,7 @@
 	<title>Frontier Shores</title>
 	<?php wp_head(); ?>
 </head>
-<body>
+<body onContextMenu="return false">
 	<div class="container">
 		<div id="mapContainer">
 			<div class="attract_loop_map">
@@ -144,7 +144,7 @@
 											<div class="content" style="width:1024.5px; height:616px;">
 												<h1><?php the_sub_field('essay_title'); ?></h1>
 												<div class="content_column">
-													<?php the_sub_field('essay_abstract'); ?>
+													<div class="abstract"><?php the_sub_field('essay_abstract'); ?></div>
 													<?php the_sub_field('read_more_essay'); ?>
 												</div>
 											</div>
@@ -247,7 +247,7 @@
 													<img src="<?php echo $image['sizes']['medium']; ?>" class="lightbox_trigger" <?php if( $n =='1' ){?>style="display:block;"<?php } else { ?>style="display: none;"<?php }; ?>>
 
 													<div class="image_caption" <?php if( $n =='1' ){?>style="display:block;"<?php } else { ?>style="display: none;"<?php }; ?>>
-														<?php echo $image['caption']; ?>
+														<div class="caption"><?php echo $image['caption']; ?></div><h3 class="lightbox_text_trigger"><img src="<?php echo network_site_url(); ?>wp-content/themes/frontier_shores/images/mag.png">&nbsp;Enlarge Image</h3>
 													</div>
 													<div class="lightbox_content image_content">
 														<?php
@@ -277,7 +277,7 @@
 										<div class="images">
 											<?php the_post_thumbnail('medium', array('class' => 'lightbox_trigger')); ?>
 											<div class="image_caption">
-												<?php echo get_post(get_post_thumbnail_id($post->ID))->post_excerpt; ?>
+												<div class="caption"><?php echo get_post(get_post_thumbnail_id($post->ID))->post_excerpt; ?></div><h3 class="lightbox_text_trigger"><img src="<?php echo network_site_url(); ?>wp-content/themes/frontier_shores/images/mag.png">&nbsp;Enlarge Image</h3>
 											</div>
 											<div class="lightbox_content image_content">
 												<?php
