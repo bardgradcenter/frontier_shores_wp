@@ -168,6 +168,20 @@ img {
       line-height: 1em;
       color: #7e7b74;
       border-bottom: 1px solid #7e7b74; }
+    .intro_screen .intro_content h2 {
+      font-size: 1em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: -20px;
+      padding: 0 15px 30px;
+      line-height: 1.0625em;
+      font-family: "Brown", sans-serif;
+      font-weight: bold;
+      display: none;
+      color: #842b38; }
+    .intro_screen .intro_content h2.lightbox_trigger {
+      padding: 30px 15px 0;
+      display: block; }
     .intro_screen .intro_content p {
       padding: 0 15px 18px; }
 
@@ -928,3 +942,8 @@ img {
     right: -1px;
     top: -1px;
     z-index: 30; }
+  .the_lightbox .credits .column {
+    width: 50%;
+    float: left; }
+  .the_lightbox .credits p {
+    padding: 0 50px 18px; }

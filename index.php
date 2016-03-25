@@ -95,6 +95,24 @@
 						<div class="intro_content" style="display:block;">
 							<h1 style="display:block;"><?php the_sub_field('essay_title'); ?></h1>
 							<?php the_sub_field('essay_abstract'); ?>
+							<?php
+							$read_more = get_sub_field('read_more_page');
+							if($read_more == 'true'){ ?>
+								<h2 class="lightbox_trigger">Credits</h2>
+								<div class="lightbox_content text_content">
+									<div class="content" style="width:1024.5px; height:616px;">
+										<h1>Credits</h1>
+										<div class="credits">
+											<div class="left_column column">
+												<?php the_sub_field('left_credit_column'); ?>
+											</div>
+											<div class="right_column column">
+												<?php the_sub_field('right_credit_column'); ?>
+											</div>
+										</div>
+									</div>
+								</div>
+							<?php } ?>
 						</div>
 					</div>
 				
@@ -195,7 +213,7 @@
 
 							<div class="label_bar">
 								<div class="checkbox unchecked"></div>
-								Show Current-Day Nations
+								Show Current-Day Pacific Nations
 							</div>
 							<?php
 							$german_checkbox = get_sub_field('show_german_claim_option');
@@ -330,7 +348,7 @@
 											</div>
 											<div class="label_bar">
 												<div class="checkbox unchecked"></div>
-												Show Current-Day Nations
+												Show Current-Day Pacific Nations
 											</div>
 
 											<?php if( have_rows('current_day_nations', 'options')) { ?>
@@ -356,7 +374,7 @@
 									</div>
 									<div class="label_bar">
 										<div class="checkbox unchecked"></div>
-										Show Current-Day Nations
+										Show Current-Day Pacific Nations
 									</div>
 									<div class="labels non_full_map">
 										<?php if( have_rows('nation_labels')) { ?>
