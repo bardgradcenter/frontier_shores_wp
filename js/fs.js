@@ -81,7 +81,7 @@ function timerIncrement() {
 				},1000);
 				$('.attract_item .locator').show().css('left','0%');
 				attract_loop($('.attract_item.active'));
-			}, 3000)
+			}, 3000);
 		}
 	}
 }
@@ -145,6 +145,7 @@ $(function(){
 					'right' : '0%'
 				},1000, function(){
 					$('.intro_content h1').fadeIn(1000);
+					$('.intro_content h2').fadeIn(1000);
 					$('.intro_content p').fadeIn(1000);
 				});
 			});
@@ -184,24 +185,28 @@ $(function(){
 				$(goto_section).addClass('active');
 				$(goto_nav).addClass('active');
 				$('.intro_content h1').fadeOut(1000);
-				$('.intro_content p').fadeOut(1000, function(){
+				$('.intro_content p').fadeOut(1000);
+				$('.intro_content h2').fadeOut(1000, function(){
 					$('.intro_screen .intro_content').animate({
 						'width' : '31.25%',
 						'right' : '6.25%'
 					},1000, function(){
 						$(goto_section).fadeIn(1000, function(){
 							$(goto_section).find('.beacons').fadeIn(1000, function(){
-								$(goto_section).find('.object_icon').each(function(){
-									var borderColor = $(this).css('borderColor');
-									$(this).animate({
-										boxShadow : '0px 0px 15px 3px ' + borderColor
-									},1000, function(){
+								setTimeout(function(){
+									$(goto_section).find('.object_icon').each(function(){
+										var borderColor = $(this).css('borderColor');
 										$(this).animate({
-											boxShadow : 'none'
-										},1000);
-									});	
-								});
+											boxShadow : '0px 0px 15px 3px ' + borderColor
+										},1000, function(){
+											$(this).animate({
+												boxShadow : 'none'
+											},1000);
+										});	
+									});
+								}, 1000);
 							});
+
 							if($(checkbox).hasClass('checked')){
 								$(goto_section).find('.expanded.active').find('.labels.non_full_map').fadeIn(250);
 							}
