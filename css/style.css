@@ -184,6 +184,9 @@ img {
       display: block; }
     .intro_screen .intro_content p {
       padding: 0 15px 18px; }
+    .intro_screen .intro_content .instructions {
+      border-top: 1px solid #a09b93;
+      padding-top: 18px; }
 
 .container {
   font-size: 0.9375em;
@@ -287,7 +290,7 @@ img {
   background-color: #928c85;
   z-index: 110; }
   .small_map .expand_map {
-    padding: 15px;
+    padding: 15px 15px 15px 25px;
     color: #fff8ea;
     text-transform: uppercase;
     position: relative;
@@ -361,7 +364,7 @@ img {
     border: 1px solid #e1dbce;
     width: 15px;
     height: 15px;
-    margin-left: 15px;
+    margin-left: 25px;
     margin-right: 10px;
     cursor: pointer;
     float: left; }
@@ -951,7 +954,7 @@ img {
   .the_lightbox .close {
     border: 1px solid #842b38;
     color: #842b38;
-    padding: 15px;
+    padding: 25px;
     position: absolute;
     text-transform: uppercase;
     right: -1px;

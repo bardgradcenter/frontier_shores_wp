@@ -95,6 +95,9 @@
 						<div class="intro_content" style="display:block;">
 							<h1 style="display:block;"><?php the_sub_field('essay_title'); ?></h1>
 							<?php the_sub_field('essay_abstract'); ?>
+							<div class="instructions">
+								<?php the_sub_field('interactive_instructions'); ?>
+							</div>
 							<?php
 							$read_more = get_sub_field('read_more_page');
 							if($read_more == 'true'){ ?>
